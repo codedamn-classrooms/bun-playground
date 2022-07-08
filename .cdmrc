@@ -1,0 +1,4 @@
+tabs: ['index.js']
+baseImage: 'bun'
+defaultView: 'terminal-editor-browser'
+terminal-one: bun run index.js
