@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<style>
+			@import url("https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap");
+
+			#container {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				flex-direction: column;
+				height: 100vh;
+			}
+
+			#container h1 {
+				margin-bottom: 5px;
+			}
+
+			#codedamn {
+				font-family: "Inter";
+				font-weight: 700;
+				text-decoration: none;
+				color: black;
+			}
+
+			#codedamn:hover {
+				text-decoration: underline;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="container">
+			<h1 id="heading">Hello World</h1>
+			<p>from</p>
+			<span>
+				<img src="/assets/bun.svg" alt="Bun Logo" width="48px" />
+				<img src="/assets/bun-title.png" />
+			</span>
+
+			<div>
+				<p>
+					powered by
+					<a id="codedamn" href="https://codedamn.com" target="_blank"
+						>codedamn</a
+					>
+				</p>
+			</div>
+		</div>
+		<script>
+			function randomHSL() {
+				const h = Math.floor(Math.random() * 360);
+				const s = Math.floor(Math.random() * 100);
+				const l = Math.floor(Math.random() * 100);
+				return `hsl(${h},${s}%,${l}%)`;
+			}
+
+			var element = document.getElementById("heading");
+
+			element.addEventListener("mouseover", function () {
+				this.style.color = randomHSL();
+			});
+
+			element.addEventListener("mouseout", function () {
+				this.style.color = "black";
+			});
+		</script>
+	</body>
+</html>
