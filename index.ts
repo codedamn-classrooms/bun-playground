@@ -6,3 +6,5 @@ Bun.serve({
     },
     port: 1337
 })
+
+console.log("Server is running on port 1337!")
